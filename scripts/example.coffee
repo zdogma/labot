@@ -10,9 +10,12 @@
 
 module.exports = (robot) ->
 
-  # robot.hear /badger/i, (msg) ->
-  #   msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
-  #
+    messages  = ['う〜んこれはLAですねえ', 'あーこれはLAですわぁ', 'はい、満場一致で、LAです']
+    la_img  = ['http://blog.creditsport.com/images/credit070627tochisan0018.jpg', 'http://1.bp.blogspot.com/-jIe-azuHlYY/U4lOOt7s6jI/AAAAAAABT8Y/8JYgZeRai1s/s1600/Final_2.jpg', 'http://thumbnail.image.rakuten.co.jp/@0_mall/juicy-web/cabinet/a87/img59042499.jpg?_ex=500x500&s=2&r=1', 'http://q-voropagirls.ocnk.net/data/q-voropagirls/product/20140330_3b7df5.jpg']
+    robot.hear /la/i, (msg) ->
+        msg.send msg.random messages
+        msg.send msg.random la_img
+  
   # robot.respond /open the (.*) doors/i, (msg) ->
   #   doorType = msg.match[1]
   #   if doorType is "pod bay"
@@ -23,7 +26,7 @@ module.exports = (robot) ->
   # robot.hear /I like pie/i, (msg) ->
   #   msg.emote "makes a freshly baked pie"
   #
-  # lulz = ['lol', 'rofl', 'lmao']
+   lulz = ['lol', 'rofl', 'lmao']
   #
   # robot.respond /lulz/i, (msg) ->
   #   msg.send msg.random lulz
